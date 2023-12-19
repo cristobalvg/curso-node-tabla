@@ -5,7 +5,7 @@ salida/*.txt
 # Los modulos de node son necesarios para nuestra aplicación, sí, pero toda la forma como se construyen los modulos de node, la tiene el package.json y el package-lock.json
 node_modules
 
-# Si por accidente llegamos a borrar un archivo, gracias a git podemos hacer git checkout -- .  nos va a regenerar la carpeta junto a su archivo, porque git le está dando seguimiento y git nos proteje de manera local.
+# Si por accidente llegamos a borrar un archivo, gracias a git podemos hacer git checkout -- .  nos va a regenerar la carpeta junto a su archivo, porque git le está dando seguimiento y git nos proteje de manera local frente a cualquier error o accidente en el código que podamos haber tenido.
 
 # Nota adicional al hacer git add . apareció la siguiente advertencia: 
 # User
