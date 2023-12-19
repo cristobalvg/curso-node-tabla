@@ -1,0 +1,6 @@
+# Los archivos internos no nos interesan, porque es el producto de algún usuario y los archivos internos como los que están en el directorio salida, se pueden volver a generar. Es más hasta lo podriamos borrar, después de que el usuario lo descargue o haga cualquier cosa con el archivo. Pero la verdad es que las tablas no nos interesa mantenrla, porque no es parte de nuestra aplicación, pero si el directorio salida y si queremos ignorar todo el contenido de un directorio, colocararíamos /salida = quiero ignorar la carpeta salida, pero si necesitamos mantener la salida, lo que vamos a ignorar es todo su contenido = /salida/*.txt = ignorar todos los archivos .txt que se encuentren en la carpeta salida:
+salida/*.txt
+# Pero adicionalmente cuando el directorio lo único que contiene es información que nosotros vamos a ignorar, es recomendable que creemos algo ahí. Por ejemplo el archivo info.md y dentro de ese archivo podemos colocar tipo markdown #información = información básica del usuario o de esta carpeta. Puede contener cualquier cosa que nosotros querramos, como por ejemplo para describir ese directorio o carpeta.
+
+# Los modulos de node son necesarios para nuestra aplicación, sí, pero toda la forma como se construyen los modulos de node, la tiene el package.json y el package-lock.json
+node_modules
