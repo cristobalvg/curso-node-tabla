@@ -4,3 +4,39 @@ salida/*.txt
 
 # Los modulos de node son necesarios para nuestra aplicación, sí, pero toda la forma como se construyen los modulos de node, la tiene el package.json y el package-lock.json
 node_modules
+
+# Si por accidente llegamos a borrar un archivo, gracias a git podemos hacer git checkout -- .  nos va a regenerar la carpeta junto a su archivo, porque git le está dando seguimiento y git nos proteje de manera local.
+
+# Nota adicional al hacer git add . apareció la siguiente advertencia: 
+# User
+# hola hice git add . y me apareció esto  = warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it, que en español significa = Advertencia: en la copia de trabajo de 'package-lock.json', LF será reemplazado por CRLF la próxima vez que Git lo toque
+# Advertencia: en la copia de trabajo de 'package.json', LF será reemplazado por CRLF la próxima vez que Git lo toque A: ste mensaje de advertencia indica que hay diferencias en el estilo de final de línea (EOL, End of Line) entre el sistema operativo que estás utilizando y el estilo de EOL configurado en los archivos package-lock.json y package.json. Los sistemas operativos Unix (como Linux y macOS) utilizan LF (line feed) como carácter de fin de línea, mientras que Windows utiliza CRLF (carriage return + line feed).
+
+# Git está informándote que al tocar esos archivos, cambiará el estilo de EOL a CRLF la próxima vez que interactúes con ellos. Este cambio puede ocurrir, por ejemplo, si realizas una operación como un git commit.
+
+# Si trabajas principalmente en un entorno Unix, es posible que prefieras que estos archivos utilicen el estilo de EOL LF.
+
+# 
+# User
+# Entonces puedo simplemente ignorarlo si, ya que se cambia solo y si hay algún dev trabajando en mac o linux, no tendrá cambió alguno, ya que se cambia automáticamente ? 
+# ChatGPT
+# Sí, puedes optar por ignorar estas advertencias si estás trabajando principalmente en un entorno donde el estilo de fin de línea (EOL) no es un problema crítico. Estas advertencias están relacionadas con cómo Git maneja los estilos de EOL entre diferentes sistemas operativos.
+
+# Por defecto, Git intenta manejar automáticamente las conversiones de EOL para que los desarrolladores en diferentes plataformas puedan colaborar en el mismo proyecto sin problemas. Si las advertencias no te están causando problemas y no observas ningún comportamiento inesperado en tus archivos, puedes seguir trabajando sin realizar cambios.
+
+# Es importante tener en cuenta que estas advertencias son más relevantes cuando hay colaboradores que utilizan sistemas operativos con diferentes estilos de EOL. Si todo tu equipo trabaja en el mismo sistema operativo y utiliza el mismo estilo de EOL en sus archivos, es probable que estas advertencias no afecten significativamente la colaboración.
+
+# Si en el futuro decides compartir el código con otros desarrolladores que utilizan diferentes sistemas operativos, es posible que desees abordar las advertencias para garantizar una experiencia de colaboración sin problemas. Sin embargo, esto dependerá de las necesidades específicas de tu proyecto y tu equipo.
+
+
+# 2 / 2
+
+# User
+# entonces si lo dejó así la conversión de hace automaticamente y no necesito hacer nada solo ignorar, a eso me refiero y si alguien está en linux se acambiara solo y también él ignorará ?
+# ChatGPT
+# Sí, exactamente. Si dejas la configuración predeterminada y no haces nada, Git manejará automáticamente las conversiones de fin de línea (EOL) según el sistema operativo en el que te encuentres. Las advertencias que estás viendo son solo eso, advertencias, y no afectarán directamente el funcionamiento de tu repositorio.
+
+# Entonces, si alguien más clona el repositorio en Linux, por ejemplo, Git ajustará automáticamente los estilos de EOL para que coincidan con las convenciones de Linux. Los desarrolladores en otros sistemas operativos también experimentarán la misma adaptación automática.
+
+# En general, si no encuentras problemas relacionados con los estilos de EOL y no ves ninguna necesidad inmediata de cambiar la configuración, puedes ignorar estas advertencias y seguir trabajando en tu proyecto.
